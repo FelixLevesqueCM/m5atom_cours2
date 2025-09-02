@@ -15,6 +15,7 @@ void loop() {
   int maLectureAngle = analogRead(MA_BROCHE_ANGLE);
   Serial.println(maLectureAngle);
 
+  /*
   if (maLectureAngle >= 2000)
   {
     monPixel = CRGB(255,0,0);
@@ -24,6 +25,12 @@ void loop() {
     monPixel = CRGB(0,0,0);
     FastLED.show();
   }
+  */
+
+  maLectureAngle = maLectureAngle / 16;
+
+  monPixel = CRGB(0,0,maLectureAngle);
+    FastLED.show();
 
   delay(100);
 }
