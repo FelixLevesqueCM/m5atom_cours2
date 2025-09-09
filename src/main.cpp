@@ -31,6 +31,4 @@ void loop() {
 
   monPixel = CRGB(0,0,maLectureAngle);
     FastLED.show();
-
-  delay(100);
 }
